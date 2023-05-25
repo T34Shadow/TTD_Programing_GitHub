@@ -646,5 +646,5 @@ MonoBehaviour:
   orientation: {fileID: 246109475}
   speedX: 10
   speedY: 10
-  SprintFactor: 2.2
+  SprintFactor: 2
   dashFactor: 2
