@@ -32,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         
@@ -64,11 +66,11 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-        //PlayerMovement and Player Sprint
+        //PlayerMovement 
 
-        if (!Input.GetKey(KeyCode.LeftShift))
+            
 
-        {
+        
             float translationX = Input.GetAxis("Vertical") * speedX;
             float translationY = Input.GetAxis("Horizontal") * speedY;
 
@@ -77,21 +79,7 @@ public class PlayerMovement : MonoBehaviour
 
             transform.Translate(0, 0, translationX);
             transform.Translate(translationY, 0, 0);
-        }
-        else
-        {
-            
-      
-         float translationX = Input.GetAxis("Vertical") * speedX * SprintFactor;
-         float translationY = Input.GetAxis("Horizontal") * speedY * SprintFactor;
-
-         translationX *= Time.deltaTime;
-         translationY *= Time.deltaTime;
-
-         transform.Translate(0, 0, translationX);
-         transform.Translate(translationY, 0, 0);
-      
-        }
+        
 
 
 
